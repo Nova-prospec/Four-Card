@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:  hsl(0, 15%, 90%);
+}
+
+header{
+    display: grid;
+    justify-content: center;
+    padding-top: 2.8rem;
+    text-align: center;
+}
+
+.text1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: lighter;
+    color: hsl(233, 4%, 50%);
+}
+.text2{
+    font-family: 'Poppins', sans-serif;
+    color: hsl(234, 12%, 34%);
+    font-weight: 600;
+}
+.text-p{
+    font-size: 15px;
+    color: hsl(230, 7%, 67%);
+    font-weight: 200;
+    font-family: 'Poppins', sans-serif;
+}
+
+img{
+    height: auto;
+    width: 15%;
+    margin-left: 9em;
+    position: absolute;
+    margin-top: 1em;
+    display: flex;
+    flex-flow: wrap;
+    
+}
+
+
+/* CARDSSS */
+
+.vertical-div{
+    flex-direction: column;
+    
+    display: grid;
+    grid-gap: 6vh;
+    justify-content: center;
+    margin-top: 3rem;
+}
+.horizontal-div{
+    display: flex;
+    flex-direction: row;
+    grid-gap: 30vw;
+    padding-top: 10px;
+    justify-content: center;
+    transform: translateY(-45vh);
+}
+
+.card-1, .card-2, .card-3, .card-4{
+    width: 22vw;
+    height: 27vh;
+    position: relative;
+    background-color: white;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px hsl(229, 6%, 66%);
+    animation-name: pop;
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: linear;
+}
+
+.card-1:hover, .card-2:hover, .card-3:hover, .card-4:hover{
+    background-color: rgb(221, 221, 221);
+}
+
+h3{
+    color: hsl(234, 12%, 34%);
+    
+}
+h3, p{
+    font-family: 'Poppins', sans-serif;
+}
+p{
+    font-size: 15px;
+    color: hsl(229, 6%, 66%);
+    font-weight: 200;
+}
+
+/* .card-2 img{
+    width: 20%;
+    margin-top: 1em;
+}
+.card-3 img{
+    width: 20%;
+    margin-top: 1em;
+}
+.card-4 img{
+    width:20%;
+    margin-top: 1em;
+} */
+.card-1{
+    border-top: 3px solid hsl(0, 78%, 62%);
+}
+.card-2{
+    border-top: 3px solid hsl(34, 97%, 64%);
+}
+.card-3{
+    border-top: 3px solid hsl(180, 62%, 55%);
+}
+.card-4{
+    border-top: 3px solid hsl(212, 86%, 64%);
+}
+@media screen and (min-width: 700px)  {
+        img{
+            transform: translateX(-3em);
+        }
+} 
+
+@media screen and (max-width: 700px) {
+    header{
+        text-align: center;
+    }
+    .vertical-div{
+       display: flex;
+       flex-direction: column;
+       grid-gap: 1em;
+       
+    }
+    .horizontal-div{
+        transform: translate(0,0);
+        display: flex;
+        flex-direction: column;
+        grid-gap: 1em;
+    }
+    .card-1, .card-2, .card-3, .card-4{
+        width: 80vw;
+        height: 25vh;
+        align-self: center;
+    
+    }
+    img{
+       width: 10%;
+       height: auto; 
+    }
+
+
+}
+
+@keyframes pop{
+    0%{
+        transform: scale(0);
+    }
+    30%,99%{
+        transform: scale(1);
+    }
+}
+/* END OF CARDS */
